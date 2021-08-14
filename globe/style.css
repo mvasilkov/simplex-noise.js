@@ -1,0 +1,44 @@
+@import url('//cdn.rawgit.com/arcticicestudio/nord/develop/src/nord.css');
+@import url('//cdn.jsdelivr.net/gh/be5invis/Iosevka@ff81c66/fonts.css');
+
+:root {
+  --size: calc(100vmin / 1.618033988749895);
+  --background: var(--nord0);
+  --foreground: var(--nord6);
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+body, .braille {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row;
+}
+
+.braille {
+  max-width: 100%;
+  max-height: 100%;
+  width: var(--size);
+  height: var(--size);
+  font: 11px/12px 'Iosevka Web', monospace;
+}
+
+.braille > * {
+  white-space: pre;
+}
+
+.braille .hidden {
+  position: fixed;
+  bottom: 100%;
+  right: 100%;
+}
