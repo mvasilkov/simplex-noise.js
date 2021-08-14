@@ -43,7 +43,7 @@
 
   // render
 
-  const simplex = new SimplexNoise;
+  const simplex = new SimplexNoise(Math.random);
   const bayer4 = lut(4);
 
   const fbm = (freq, amp, x, y, z) =>
